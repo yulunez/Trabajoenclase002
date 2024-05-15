@@ -1,16 +1,47 @@
+@font-face {
+    font-family: 'poetsenone';
+    src: url('fonts/PoetsenOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.parallax-section {
+    height: 100vh; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+#inicio {
+    background-image: url('img/amarillo.jpg');
+}
+#menu {
+    background-image: url('img/amarillo.jpg');
+}
+#ofertas {
+    background-image: url('img/amarillo.jpg');
+}
+#contactos {
+    background-image: url('img/amarillo.jpg');
+}
+
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    background-color: #fa1d1d;
+    color: #fcd630;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
 }
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 .nav-links {
     display: flex;
@@ -24,9 +55,10 @@ nav{
 
 }
 .nav-links a {
-    color: #fff;
+    color: #fdde2e;
     text-decoration: none;
-
+    font-family: 'poetsenone';
+    font-size: 25px;
 }
 .toggle-btn {
     display: none;
@@ -39,9 +71,10 @@ nav{
 .toggle-btn span {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #f5d835;
 
 }
+
 @media(max-witdh:768px){
     .nav-links {
         display: none;
@@ -58,4 +91,63 @@ nav{
         display: flex;
         
     }
+}
+
+a{
+    position: relative;
+    overflow: hidden;
+}
+a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: #fdde2e;
+    transition: width 0.3s ease;
+}
+a:hover:before{
+width: 100%;
+}
+
+.somos{
+
+    width: 300px; /* Ancho del cuadro */
+    height: 325px; /* Altura del cuadro */
+    background-color: #f82d2d; /* Color de fondo del cuadro */
+    border: 2px solid #f31818; /* Borde del cuadro */
+    padding: 20px; /* Espaciado interno del cuadro */
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    top: 25%;
+    border-radius: 15px;
+}
+
+.somos p {
+     
+    font-family: 'poetsenone'; 
+    font-size: 16px; 
+    color: #333; 
+}
+
+.local img{
+    width: 700px;
+    height: 350px;
+    position: relative;
+    top: 5%;
+    left: 100vh;
+    border-radius: 25px;
+}
+
+.menu img{
+    position: relative;
+    top: 35vh;
+}
+
+.clasica img{
+    position: relative;
+    top: 35vh;
+    left: 100vh;
 }
